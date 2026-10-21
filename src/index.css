@@ -1,0 +1,79 @@
+@import "tailwindcss" source("./");
+@import "@fontsource/eb-garamond/500.css";
+@import "@fontsource/eb-garamond/500-italic.css";
+@import "@fontsource-variable/manrope/index.css";
+@import "./styles/tokens.css";
+@import "lenis/dist/lenis.css";
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-night: var(--night);
+  --color-on-photo: var(--on-photo);
+
+  --font-display: "EB Garamond", Georgia, serif;
+  --font-sans: "Manrope Variable", "Manrope", system-ui, sans-serif;
+
+  /* Escala de raio: 4 fotos, 16 painéis, pílula em botões */
+  --radius-photo: 4px;
+  --radius-panel: 16px;
+
+  --ease-out: var(--ease-out);
+  --ease-in-out: var(--ease-in-out);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  overflow-x: clip;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+@keyframes progresso {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Zoom lento das fotos no telão (Ken Burns). */
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* Com ?movimento=1 a classe movimento-forcado mantém as animações mesmo assim. */
+@media (prefers-reduced-motion: reduce) {
+  html:not(.movimento-forcado) { scroll-behavior: auto; }
+  html:not(.movimento-forcado) *,
+  html:not(.movimento-forcado) *::before,
+  html:not(.movimento-forcado) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

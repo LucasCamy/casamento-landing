@@ -1,0 +1,39 @@
+/*
+ * Tokens de design. Componentes usam só estas variáveis (via classes do Tailwind
+ * definidas em @theme inline), nunca hex solto. Contrastes calculados no DESIGN.md.
+ */
+:root {
+  --bg: #f3f3ef;
+  --surface: #e8e9e3;
+  --ink: #1b2420;
+  --ink-muted: #55605b;
+  --line: #cfd3cc;
+  --accent: #2e5b4e;
+  --accent-ink: #f3f3ef;
+  --shadow: 27 36 32;
+
+  /* Fixas nos dois temas: usadas sobre fotos e vídeos. */
+  --night: #0d1210;
+  --on-photo: #f6f6f2;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 120ms;
+  --dur-2: 180ms;
+  --dur-3: 280ms;
+  --dur-4: 560ms;
+  --dur-5: 900ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111513;
+    --surface: #181e1b;
+    --ink: #eceae4;
+    --ink-muted: #a3aca7;
+    --line: #2c3530;
+    --accent: #9cc5b3;
+    --accent-ink: #0f1a16;
+    --shadow: 0 0 0;
+  }
+}

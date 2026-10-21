@@ -1,0 +1,9 @@
+services:
+  site:
+    build: .
+    image: landing-casamento:latest
+    container_name: landing-casamento
+    ports:
+      # Acesse em http://localhost:8080 (troque o 8080 se a porta estiver ocupada)
+      - "8080:80"
+    restart: unless-stopped

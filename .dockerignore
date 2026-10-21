@@ -1,0 +1,10 @@
+node_modules
+dist
+capturas
+versoes
+.claude
+.git
+*.log
+Dockerfile
+docker-compose.yml
+.dockerignore
