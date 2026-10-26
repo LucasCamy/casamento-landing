@@ -49,24 +49,24 @@ function foto(n: number, largura: number, altura: number, categoria: Categoria, 
 }
 
 export const casal = {
-  noiva: 'Maristela',
-  noivo: 'Vinicius',
-  iniciais: 'M&V',
+  noiva: 'Fernanda',
+  noivo: 'Fernando',
+  iniciais: 'F&F',
   data: '2027-03-14',
   dataPorExtenso: '14 de março de 2027',
   local: 'Fazenda Santa Clara, Itu (SP)',
-  hashtag: '#MaristelaEVinicius',
+  hashtag: '#FernandaEFernando',
 }
 
 export const fotos: Foto[] = [
-  foto(11, 1800, 2700, 'ensaio', 'Maristela e Vinicius de mãos dadas num campo dourado ao pôr do sol'),
+  foto(11, 1800, 2700, 'ensaio', 'Fernanda e Fernando de mãos dadas num campo dourado ao pôr do sol'),
   foto(2, 1800, 2700, 'cerimonia', 'Beijo dos noivos sob chuva de pétalas, cercados pelas madrinhas'),
   foto(3, 1800, 1200, 'detalhes', 'Duas alianças douradas sobre tecido claro'),
   foto(7, 1800, 2700, 'cerimonia', 'Gazebo branco decorado com flores laranja para a cerimônia'),
   foto(5, 1800, 1200, 'ensaio', 'O casal caminhando no alto de uma colina com montanhas ao fundo'),
   foto(6, 1800, 2700, 'ensaio', 'Os noivos de testas encostadas, envoltos no véu, sob luz dourada'),
   foto(9, 1800, 1200, 'festa', 'Mesa comprida da recepção com flores do campo e taças'),
-  foto(12, 1800, 2700, 'festa', 'Maristela e Vinicius rindo enquanto caminham entre as palmeiras'),
+  foto(12, 1800, 2700, 'festa', 'Fernanda e Fernando rindo enquanto caminham entre as palmeiras'),
   foto(15, 1800, 1050, 'cerimonia', 'Foto em preto e branco dos noivos com o véu ao vento'),
   foto(10, 1800, 1200, 'detalhes', 'Alianças apoiadas sobre um buquê de rosas claras'),
   foto(8, 1800, 1200, 'ensaio', 'O casal abraçado à beira de um lago'),
